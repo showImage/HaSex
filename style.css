@@ -1,0 +1,364 @@
+/* css to reset all the designs */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* css to reset all the designs */
+
+/* add styles on elements */
+
+.header {
+    border-bottom: 1px solid #E2E8F0;
+    background-color: #222;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    background-color:  rgba(21, 38, 23, 0.8);
+}
+
+.hamburger {
+    display: none;
+    font-family: FontAwesome;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    /* margin-top: 0px; */
+    -moz-osx-font-smoothing: grayscale;
+    /* position: absolute; */
+    /* right: 0; */
+    /* left: 0; */
+    /* top: 0; */
+    background: #FF8397;
+    width: 35px;
+    height: 35px;
+    content: '\f0c9';
+    color: #fff;
+    text-align: center;
+    line-height: 44px;
+    font-size: 20px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    /* background-color: #101010; */
+    background-color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+    background-color: rgb(206, 26, 56);
+    padding: 3px;
+}
+
+.nav-link {
+    /* font-size: 1.6rem; */
+    font-size: 2rem;
+    font-weight: 400;
+    /* color: #475569; */
+    color: #fff;
+    /* change */
+}
+
+.nav-link:hover {
+    color: #482ff7;
+}
+
+.nav-logo {
+    /* font-size: 2.1rem; */
+    font-size: 3rem;
+    font-weight: 500;
+    margin: auto;
+    /* color: #482ff7; */
+    color: #fff;
+}
+.min-header {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.min-header::before {
+    content: "";
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    background: url('/img/f8936c957aa1fad_main.jpg') center/cover no-repeat;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+.btn{
+    background-color: #ff6b81;
+    color: white;
+    margin-left: 3px;
+    border: none;
+    font-family:cursive;
+    font-weight: bold;
+     padding: 5px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    z-index: 10;  /* Ensure it stays above the gallery */
+    border-radius: 5px;
+}
+/* Flexbox Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+  
+    /* filter: blur(18px);  */
+}
+
+/* Gallery Item Style */
+.gallery-item {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid #ff6b81; /* Add color border to the bottom */
+    padding-bottom: 3px;
+}
+.gallery-item p{
+    font-size: medium;
+    font-family: 'Cairo', 'Amiri', sans-serif;
+    font-weight: bold;
+}
+.gallery-item img {
+    width: 100%;
+    height: 380px;  /* Fixed height for all images */
+    object-fit: contain;  /* Ensures the image covers the container without stretching */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    direction: rtl; /* Right-to-left text direction */
+    text-align: right; /* Align text to the right */
+}
+.logo_container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling for h1 */
+.text {
+    font-size: 36px;  /* Large font size for h1 */
+    font-weight: bold;  /* Make it bold */
+    color: #555;
+    font-family: 'Cairo', 'Amiri', sans-serif;
+
+}
+
+.text span {
+    color: pink;  /* Color the word "girls" in pink */
+    font-family: 'Cairo', 'Amiri', sans-serif;
+    font-weight: bold;
+}
+.nav-logo span{
+    color: pink;
+}
+/* Styling for p */
+.paragraph {
+    font-size: 18px;  /* Set a reasonable font size */
+    color: #333;  /* A dark color for the paragraph */
+    font-family: inherit;  /* Inherit font family from the h1 */
+    margin-top: 10px;
+    line-height: 1.5;
+    font-family: 'Cairo', 'Amiri', sans-serif;
+    font-weight: bold;
+    direction: rtl;
+    margin: 10px;
+}
+.paragraph i {
+    margin-right: 10px;  /* Space between the icon and the text */
+    font-size: 24px;  /* Icon size */
+    color: pink;  /* Icon color */
+}
+/* Container for both title and paragraph */
+.minHeader {
+    display: flex;  
+    width: 100%;         /* Align children (h1 and p) horizontally */
+    align-items: center;     
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px;               /* Space between h1 and p */
+    padding: 20px;
+}
+
+/* Styling for h1 */
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Cairo', 'Amiri', sans-serif;
+    direction: rtl;
+    
+       /* Center the icon vertically with text */
+    color: #2d1683;
+}
+
+.title span {
+    color: #27445D;
+}
+
+/* Styling for p */
+.para {
+    font-size: 18px;
+    color: #333;
+    font-family: inherit;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;     /* Vertically align the icon with the text */
+}
+
+/* Styling for the icons */
+.title i, .para i {
+    margin-right: 10px;      /* Add space between icon and text */
+    font-size: 24px;         /* Icon size */
+    color: pink;             /* Icon color */
+}
+.title i{
+    color: #2d1683;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 600px) {
+    .gallery-item {
+        width: 48%; /* 2 items per row */
+    }
+}
+
+@media (min-width: 900px) {
+    .gallery-item {
+        width: 30%; /* 3 items per row */
+    }
+}
+
+@media (min-width: 1200px) {
+    .gallery-item {
+        width: 22%; /* 4 items per row */
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        margin-top: 10px;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        /* background-color: #fff; */
+        background-color: #222;
+        width: 100%;
+        color: #FBF5DD;
+        border-radius: 10px;
+        text-align: center;
+        z-index: 10; /* Ensure menu stays above other elements */
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+   
+    .nav-link {
+        color: #fff;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .minHeader{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .text{
+        font-size: 20px;
+    }
+    .paragraph{
+        font-size: 15px;
+    }
+
+}
+
+/* add styles on elements */
