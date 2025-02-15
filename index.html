@@ -6,10 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet"/>
     <title>HAfSa Group </title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -61,7 +57,7 @@
         <div class="container">
            <div class="logo_container">
             <h1 class="text" style="direction: rtl;">مجموعة خاصة بالفتيات <span>للمتعة فقط  </span></h1>
-            <p class="paragraph"> <i class="fas fa-image"></i>سجل الدخول من أجل رؤية الصور<button class="btn" style="margin: 10px;" onclick="window.location.href='login/index.html';">اضغط هنا</button></p>
+            <p class="paragraph"> <i class="fas fa-image"></i>سجل الدخول من أجل رؤية الصور<button class="btn" style="margin: 10px;" onclick="window.location.href='login/index.html';">Sign in</button></p>
            </div>
          
           <div class="gallery">
@@ -144,64 +140,6 @@
 
 
     <script src="scri.js"></script>
-     <script>
-         // Firebase Configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyCpNeiGF63knNi8kCzgYBVQWAh_B1yEijs",
-    authDomain: "firstproject-72f32.firebaseapp.com",
-    projectId: "firstproject-72f32",
-    storageBucket: "firstproject-72f32.appspot.com",
-    messagingSenderId: "366500686838",
-    appId: "1:366500686838:web:b316553e92c7ad2b16f5d7",
-    measurementId: "G-DSTWZNEJ80",
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
-// Function to get visitor info
-async function getVisitorInfo() {
-    try {
-        const ipResponse = await fetch('https://api64.ipify.org?format=json');
-        const ipData = await ipResponse.json();
-        const ip = ipData.ip;
-
-        const userAgent = navigator.userAgent;
-        const os = navigator.platform;
-        const browserLanguage = navigator.language;
-        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        const screenResolution = `${window.screen.width}x${window.screen.height}`;
-        const cpuCores = navigator.hardwareConcurrency || "Unknown";
-        const memory = navigator.deviceMemory ? `${navigator.deviceMemory}GB` : "Unknown";
-        const sourceUrl = window.location.href;
-        const currentDate = new Date();
-        const time = `${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
-
-        const visitorData = {
-            ip: ip,
-            userAgent: userAgent,
-            os: os,
-            browserLanguage: browserLanguage,
-            timezone: timezone,
-            screenResolution: screenResolution,
-            cpuCores: cpuCores,
-            memory: memory,
-            sourceUrl: sourceUrl,
-            timestamp: currentDate.toISOString(),
-            time: time
-        };
-
-        // Save visitor info to Firestore
-        await db.collection("visitorInfo").add(visitorData);
-        console.log("Visitor data saved successfully!");
-    } catch (error) {
-        console.error("Error getting visitor info:", error);
-    }
-}
-
-getVisitorInfo();
-     </script>
 </body>
 
 </html>
